@@ -2,7 +2,7 @@
 
 Configure epel repository:
   pkg.installed:
-  {%- if grains["os"] == "CentOs" %}
+  {%- if grains["os"] == "CentOS" %}
     - name: epel-release
   {%- else %}
     - sources:
