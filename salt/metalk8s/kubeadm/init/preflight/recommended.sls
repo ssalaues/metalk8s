@@ -2,7 +2,7 @@
 
 Install recommended packages:
   pkg.installed:
-    - pkgs: {{ kubeadm_preflight.recommended.packages }}
+    - pkgs: {{ kubeadm_preflight.recommended.packages | tojson }}
 
 {%- if salt.pkg.version('kubelet') %}
 Kubelet package is installed:

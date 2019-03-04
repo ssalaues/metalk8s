@@ -10,7 +10,7 @@ if test -z "$(type -p)"; then set -o pipefail; fi
 RPM=${RPM:-$(command -v rpm)}
 SYSTEMCTL=${SYSTEMCTL:-$(command -v systemctl)}
 YUM=${YUM:-$(command -v yum)}
-SALT_CALL=${SALT_CALL:-salt-call}
+SALT_CALL=${SALT_CALL:-salt-call} # --log-file=/vagrant/salt.log --log-file-level=debug --state-verbose=True}
 
 SALT_MINION_FILE_CLIENT_LOCAL_CONF=/etc/salt/minion.d/99-file-client-local.conf
 # shellcheck disable=SC2034

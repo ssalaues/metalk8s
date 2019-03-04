@@ -45,7 +45,7 @@ if ! test -x "/srv/scality/metalk8s-$SHORT_VERSION/bootstrap.sh"; then
 fi
 
 echo "Launching bootstrap"
-exec "/srv/scality/metalk8s-$SHORT_VERSION/bootstrap.sh"
+exec "/srv/scality/metalk8s-$SHORT_VERSION/bootstrap.sh" |& tee /vagrant/run_output.txt
 SCRIPT
 
 # To support VirtualBox linked clones

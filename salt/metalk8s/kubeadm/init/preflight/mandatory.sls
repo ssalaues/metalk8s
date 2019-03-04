@@ -4,7 +4,7 @@
 
 Install mandatory packages:
   pkg.installed:
-    - pkgs: {{ kubeadm_preflight.mandatory.packages }}
+    - pkgs: {{ kubeadm_preflight.mandatory.packages | tojson }}
 
 {%- if kubelet.container_engine %}
 Enable {{ kubelet.container_engine }} service:
