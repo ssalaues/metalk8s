@@ -1,3 +1,5 @@
+{%- from "metalk8s/map.jinja" import repo with context %}
+
 {% set images = [
     {
         'name': 'etcd',
@@ -27,6 +29,9 @@
         'name': 'nginx',
         'tag': '1.15.8',
     },
+    {   'name': 'package-repositories',
+        'tag': '1.0.0',
+    },
     {
         'name': 'salt-master',
         'tag': '2018.3.3-1',
@@ -34,9 +39,15 @@
 ] %}
 {% set images_path = '/srv/scality/metalk8s-2.0/images' %}
 
+include:
+  - metalk8s.repo
+
 Install skopeo:
   pkg.installed:
     - name: skopeo
+    - version: {{ repo.packages.skopeo.version }}
+    - require:
+      - pkgrepo: Configure {{ repo.packages.skopeo.repository }} repository
 
 {% for image in images %}
 Import {{ image.name }} image:
