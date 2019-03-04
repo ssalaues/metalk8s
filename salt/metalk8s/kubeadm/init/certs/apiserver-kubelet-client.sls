@@ -17,7 +17,7 @@ Create kube-apiserver kubelet client private key:
     - makedirs: True
     - dir_mode: 755
     - require:
-      - pkg: Install m2crypto
+      - pkg: Install python34-m2crypto
 
 Generate kube-apiserver kubelet client certificate:
   x509.certificate_managed:
