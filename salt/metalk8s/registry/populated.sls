@@ -29,9 +29,6 @@
         'name': 'nginx',
         'tag': '1.15.8',
     },
-    {   'name': 'package-repositories',
-        'tag': '1.0.0',
-    },
     {
         'name': 'salt-master',
         'tag': '2019.2.0-1',

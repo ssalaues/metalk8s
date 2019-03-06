@@ -7,7 +7,7 @@ Install criu:
   pkg.installed:
     - name: criu
     - version: {{ repo.packages.criu.version }}
-    - fromrepo: {{ repo.packages.criu.repository }}
+    # - fromrepo: {{ repo.packages.criu.repository }}
 {%- if not repo.online_mode %}
     - require:
       - pkgrepo: Configure {{ repo.packages.criu.repository }} repository
@@ -17,7 +17,7 @@ Install runc:
   pkg.installed:
     - name: runc
     - version: {{ repo.packages.runc.version }}
-    - fromrepo: {{ repo.packages.runc.repository }}
+    # - fromrepo: {{ repo.packages.runc.repository }}
 {%- if not repo.online_mode %}
     - require:
       - pkgrepo: Configure {{ repo.packages.runc.repository }} repository

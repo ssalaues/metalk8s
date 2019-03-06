@@ -19,7 +19,7 @@ Install and configure cri-tools:
   pkg.installed:
     - name: cri-tools
     - version: {{ repo.packages['cri-tools'].version }}
-    - fromrepo: {{ repo.packages['cri-tools'].repository }}
+    # - fromrepo: {{ repo.packages['cri-tools'].repository }}
     - require:
       - pkgrepo: Configure {{ repo.packages['cri-tools'].repository }} repository
   file.serialize:

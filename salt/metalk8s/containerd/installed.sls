@@ -17,7 +17,7 @@ Install containerd:
   pkg.installed:
     - name: containerd
     - version: {{ repo.packages.containerd.version }}
-    - fromrepo: {{ repo.packages.containerd.repository }}
+    # - fromrepo: {{ repo.packages.containerd.repository }}
     - require:
       - pkgrepo: Configure {{ repo.packages.containerd.repository }} repository
       - pkg: Install runc
