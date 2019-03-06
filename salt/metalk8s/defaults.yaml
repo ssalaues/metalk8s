@@ -111,7 +111,7 @@ repo:
       version: latest
       repository: extras
     salt-minion:
-      version: 2018.3.3-1.el7
+      version: 2019.2.0-1.el7
       repository: saltstack
     skopeo:
       version: latest
